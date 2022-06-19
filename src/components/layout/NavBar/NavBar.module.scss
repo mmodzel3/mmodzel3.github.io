@@ -1,0 +1,39 @@
+.NavBar {
+    height: 5rem;
+    width: 100%;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: loos-normal,sans-serif;
+    font-weight: 700;
+}
+
+nav {
+    height: 100%;
+}
+
+.NavLink {
+    display: inline-block;
+
+    padding: 1rem;
+    margin: 0.5rem;
+    
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.NavLink:hover {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.NavHome {
+    @extend .NavLink;
+
+    font-size: 2rem;
+}
+
+.NavHome:hover {
+    background-color: inherit;
+}

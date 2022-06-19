@@ -1,0 +1,25 @@
+.Welcome {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    width: 100%;
+    height: 35vh;
+
+    color: white;
+    text-align: center;
+}
+
+.WelcomeText {
+    flex-basis: 20rem;
+    min-width: 20rem;
+
+    animation: move-text 2s linear;
+}
+
+@keyframes move-text {
+    from { margin-right: -20rem };
+    to { margin-right: 0; };
+    from { opacity: 0; };
+    to { opacity: 1; };
+}

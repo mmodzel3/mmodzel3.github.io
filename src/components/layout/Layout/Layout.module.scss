@@ -1,0 +1,54 @@
+.Layout {
+    font-family: Inter,sans-serif;
+}
+
+.Page {
+    margin-bottom: 48px;
+}
+
+.Background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.Sky {
+    @extend .Background;
+
+    background: rgb(80,80,104) linear-gradient(-60deg, rgb(32,32,32), rgb(40,50,64), rgb(80,80,104), rgb(219,139,90));
+    background-size: stretch;
+    z-index: -3;
+}
+
+
+.TwinklingStars {
+    @extend .Background;
+
+    top: 0;
+    left: 35%;
+    background: transparent url(../../../../public/background/sky-stars.png);
+    z-index: -2;
+
+    animation: twink-and-move 10s linear infinite alternate;
+    transform: rotate(-60deg);
+}
+
+@keyframes twink-and-move {
+    from {opacity: 0;}
+    to {opacity: 0.3;}
+    from {background-position: 0 0;}
+    to {background-position: -10px 25px;}
+}
+
+.Fog {
+    @extend .Background;
+
+    background: transparent url(../../../../public/background/fog.png) repeat top center;
+    opacity: 0.05;
+    z-index: -1;
+}
